@@ -1,0 +1,33 @@
+{
+  "name": "vectools",
+  "version": "1.0.0",
+  "description": "A lightweight, zero-dependency utility library for vector mathematics and AI embeddings.",
+  "keywords": [
+    "vector",
+    "math",
+    "embeddings",
+    "cosine-similarity",
+    "ai",
+    "rag",
+    "machine-learning",
+    "distance",
+    "dot-product",
+    "arrays",
+    "spatial"
+  ],
+  "homepage": "https://github.com/NavneetSinghArora/vectools#readme",
+  "bugs": {
+    "url": "https://github.com/NavneetSinghArora/vectools/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NavneetSinghArora/vectools.git"
+  },
+  "license": "MIT",
+  "author": "Navneet Singh Arora <navneetsingh790@gmail.com> (https://navneetsingharora.com)",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "node --test"
+  }
+}
