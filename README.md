@@ -1,7 +1,9 @@
 # vectools
 
-![npm version](https://img.shields.io/npm/v/vectools)
-![License](https://img.shields.io/npm/l/vectools)
+[![npm version](https://img.shields.io/npm/v/vectools)](https://www.npmjs.com/package/vectools)
+[![License](https://img.shields.io/npm/l/vectools)](https://www.npmjs.com/package/vectools)
+
+**Available on npm:** [https://www.npmjs.com/package/vectools](https://www.npmjs.com/package/vectools)
 
 A lightweight, zero-dependency utility library for vector mathematics and AI embeddings. 
 
