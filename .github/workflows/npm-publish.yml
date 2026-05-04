@@ -1,44 +1,31 @@
 name: Publish Package to npmjs
+
 on:
   push:
-    branches:
-      - main
-  workflow_dispatch: # Allows you to run this workflow manually from the Actions tab
+    tags:
+      - 'v*'
+  workflow_dispatch:
+
+permissions:
+  id-token: write  # Required for OIDC Trusted Publishing
+  contents: read
 
 jobs:
-  build:
+  publish:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
+      - uses: actions/setup-node@v4
         with:
-          node-version: 22
-          
+          node-version: '22'
+          registry-url: 'https://registry.npmjs.org'
+
       - name: Install dependencies
         run: npm install
-        
+
       - name: Run tests
         run: npm test
 
-  publish-npm:
-    needs: build
-    runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      id-token: write # Required for NPM Trusted Publishing (OIDC)
-    steps:
-      - uses: actions/checkout@v4
-      
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 22
-          registry-url: 'https://registry.npmjs.org'
-          
-      - name: Install dependencies
-        run: npm install
-        
       - name: Publish to npm
-        run: npm publish --provenance
+        run: npm publish
