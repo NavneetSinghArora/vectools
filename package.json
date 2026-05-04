@@ -1,6 +1,6 @@
 {
   "name": "vectools",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A lightweight, zero-dependency utility library for vector mathematics and AI embeddings.",
   "keywords": [
     "vector",
